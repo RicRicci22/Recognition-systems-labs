@@ -161,3 +161,5 @@ cython_debug/
 test/
 train/
 weights/
+submission.csv
+submission2.csv
