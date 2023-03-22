@@ -43,7 +43,6 @@ class cats_dogs_dataset(Dataset):
 
         return img
 
-
 def get_datasets(
     train_images_dir,
     test_images_dir,
