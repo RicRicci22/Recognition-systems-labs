@@ -1,15 +1,8 @@
-# Build datasets, dataloader
-from torch.utils.data import DataLoader
-import torch
-from torch.utils.data import Dataset
-from torchvision.io import read_image, ImageReadMode
-import numpy as np
 import os
 import random
-
-
-def _init_fn(worker_id):
-    np.random.seed(0 + worker_id)
+import torch
+from torch.utils.data import Dataset, DataLoader
+from torchvision.io import read_image, ImageReadMode
 
 
 # Create the dataset
@@ -42,6 +35,7 @@ class cats_dogs_dataset(Dataset):
             return img, label
 
         return img
+
 
 def get_datasets(
     train_images_dir,
@@ -81,7 +75,6 @@ def get_loaders(trainset, valset, testset, batch_size, num_workers=0, pin_memory
         shuffle=True,
         num_workers=num_workers,
         pin_memory=pin_memory,
-        worker_init_fn=_init_fn,
         persistent_workers=True,
     )
     valloader = DataLoader(
@@ -90,7 +83,6 @@ def get_loaders(trainset, valset, testset, batch_size, num_workers=0, pin_memory
         shuffle=False,
         num_workers=0,
         pin_memory=pin_memory,
-        worker_init_fn=_init_fn,
     )
     testloader = DataLoader(
         testset,
@@ -98,7 +90,6 @@ def get_loaders(trainset, valset, testset, batch_size, num_workers=0, pin_memory
         shuffle=False,
         num_workers=0,
         pin_memory=pin_memory,
-        worker_init_fn=_init_fn,
     )
 
     return trainloader, valloader, testloader
