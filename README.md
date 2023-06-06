@@ -11,7 +11,7 @@ You can find also the slides (in power point format) on google drive, click here
 <code>cd Recognition-systems-labs.git</code>
 ### For anaconda users 
 3) Create a new virtual environment with the command  
-<code>conda env create -f environment.yml</code>
+<code>conda env create -f requirements.yml</code>
 ### For pip users
 3) Create a new virtual environment with the command  
 <code>pip install -r requirements.txt</code> (we suggest to first create a virtual environment, activate it and run the command)
