@@ -2,7 +2,7 @@
 
 Hi! This is the code for the labs of Recognition systems! If you want also the slides drop an email at: riccardo.ricci-1@unitn.it
 
-You can find also the slides (in power point format) on google drive, click here -> :newspaper:[https://drive.google.com/drive/folders/1GJqtPPzHxxR8HRM38GDQESRR-FsBohMM?usp=sharing]
+You can find also the slides (in power point format) on google drive, click here -> [:newspaper:](https://drive.google.com/drive/folders/1GJqtPPzHxxR8HRM38GDQESRR-FsBohMM?usp=sharing)
 
 ## Usage
 1) Clone the repository by opening a cmd and typing  
