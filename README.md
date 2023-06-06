@@ -5,10 +5,13 @@ Hi! This is the code for the labs of Recognition systems! If you want also the s
 ## Usage
 1) Clone the repository by opening a cmd and typing  
 <code>git clone https://github.com/RicRicci22/Recognition-systems-labs.git</code> (install git on your pc if not present)
-3) Navigate inside the folder <code>cd Recognition-systems-labs.git</code>
+3) Navigate inside the folder  
+<code>cd Recognition-systems-labs.git</code>
 ### For anaconda users 
-3) Create a new virtual environment with the command <code>conda env create -f environment.yml</code>
+3) Create a new virtual environment with the command 
+<code>conda env create -f environment.yml</code>
 ### For pip users
-3) Create a new virtual environment with the command <code>pip install -r requirements.txt</code> (we suggest to first create a virtual environment, activate it and run the command
+3) Create a new virtual environment with the command 
+<code>pip install -r requirements.txt</code> (we suggest to first create a virtual environment, activate it and run the command)
 
 4) Navigate to each folder, you will find a python notebook with all the code inside! Enjoy! :)
