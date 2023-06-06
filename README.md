@@ -3,8 +3,8 @@
 Hi! This is the code for the labs of Recognition systems! If you want also the slides drop an email at: riccardo.ricci-1@unitn.it
 
 ## Usage
-1) Clone the repository by opening a cmd and typing <code>git clone https://github.com/RicRicci22/Recognition-systems-labs.git</code> (install git on your pc if not present)
-2) Navigate inside the folder <code>cd Recognition-systems-labs.git</code>
+1) Clone the repository by opening a cmd and typing  <code>git clone https://github.com/RicRicci22/Recognition-systems-labs.git</code> (install git on your pc if not present)
+3) Navigate inside the folder <code>cd Recognition-systems-labs.git</code>
 ### For anaconda users 
 3) Create a new virtual environment with the command <code>conda env create -f environment.yml</code>
 ### For pip users
