@@ -35,7 +35,7 @@ numpy==1.24.3
 packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1681337016113/work
 parso @ file:///home/conda/feedstock_root/build_artifacts/parso_1638334955874/work
 pickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1602536217715/work
-Pillow==9.3.0
+Pillow==10.0.1
 platformdirs @ file:///home/conda/feedstock_root/build_artifacts/platformdirs_1683850015520/work
 prompt-toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1677600924538/work
 psutil @ file:///C:/Windows/Temp/abs_b2c2fd7f-9fd5-4756-95ea-8aed74d0039flsd9qufz/croots/recipe/psutil_1656431277748/work
