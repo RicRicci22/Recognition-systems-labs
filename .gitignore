@@ -160,7 +160,7 @@ cython_debug/
 #.idea/
 Lab 1/test/
 Lab 1/train/
-Lab 1/weights/
+Lab 1/trained_models/
 Lab 1/figures
 
 Lab 2/flowers
