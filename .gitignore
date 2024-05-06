@@ -164,6 +164,8 @@ Lab 1/PlainCNN_18_layers/
 Lab 1/PlainCNN_34_layers/
 Lab 1/SkipCNN_18_layers/
 Lab 1/SkipCNN_34_layers/
+Lab 1/Resnet18_finetuning/
+Lab 1/Resnet18_linear_probing/
 
 Lab 2/flowers
 Lab 2/weights

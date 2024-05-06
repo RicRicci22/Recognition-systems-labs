@@ -64,15 +64,15 @@ def train(model, trainloader, valloader, epochs, optimizer, loss_fn, device, log
     print("Validation loss epoch ",epoch,":",loss_validation/len(valloader))
     print("Validation accuracy epoch ",epoch,":",accuracy_validation/len(valloader))
 
-    if save_directory is not None:
-        os.makedirs(save_directory, exist_ok=True)
-        # Save the model 
-        torch.save(model.state_dict(), os.path.join(save_directory, f"model_{epoch+1}_epochs.pt"))
-        with open(os.path.join(save_directory,"acc_train.pkl"),"wb") as f:
-            pickle.dump(acc_train,f)
-        with open(os.path.join(save_directory,"loss_train.pkl"),"wb") as f:
-            pickle.dump(loss_train,f)
-        with open(os.path.join(save_directory,"acc_val.pkl"),"wb") as f:
-            pickle.dump(acc_val,f)
-        with open(os.path.join(save_directory,"loss_val.pkl"),"wb") as f:
-            pickle.dump(loss_val,f)
+  if save_directory is not None:
+      os.makedirs(save_directory, exist_ok=True)
+      # Save the model 
+      torch.save(model.state_dict(), os.path.join(save_directory, f"model_{epoch+1}_epochs.pt"))
+      with open(os.path.join(save_directory,"acc_train.pkl"),"wb") as f:
+          pickle.dump(acc_train,f)
+      with open(os.path.join(save_directory,"loss_train.pkl"),"wb") as f:
+          pickle.dump(loss_train,f)
+      with open(os.path.join(save_directory,"acc_val.pkl"),"wb") as f:
+          pickle.dump(acc_val,f)
+      with open(os.path.join(save_directory,"loss_val.pkl"),"wb") as f:
+          pickle.dump(loss_val,f)
