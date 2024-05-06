@@ -168,6 +168,10 @@ Lab_1/Resnet18_finetuning/
 Lab_1/Resnet18_linear_probing/
 
 Lab_2/flowers
-Lab_2/weights
+Lab_2/PlainCNN_18_layers/
+Lab_2/SkipCNN_18_layers/
+Lab_2/Resnet18_linear_probing/
+Lab_2/Resnet50_linear_probing/
+Lab_2/Resnet101_linear_probing/
 
 Lab_3/train.py
