@@ -1,5 +1,27 @@
 import torch
 
+
+class EmbeddingMatrixModel(torch.nn.Module):
+    def __init__(self, embedding_dim:int, output_dim:int, pad_idx:int, vocab_size:int):
+        super(EmbeddingMatrixModel, self).__init__()
+        # Create the embedding table. This is used to convert word indices to word embeddings.
+        self.embedding = torch.nn.Embedding(num_embeddings=vocab_size, embedding_dim=embedding_dim, padding_idx=pad_idx)
+        # Create the output linear layer
+        self.fc = torch.nn.Linear(embedding_dim, output_dim)
+        self.eps = 1e-10
+    
+    def forward(self, texts):
+        texts_embedded = self.embedding(texts)
+        avg = texts_embedded.sum(dim=1)
+        sum = (texts!=0).sum(dim=1).unsqueeze(1)+self.eps
+        avg = avg/sum
+        
+        loss_mask = (sum!=0).to(dtype=torch.int)
+
+        out = self.fc(avg)
+        
+        return out, loss_mask
+
 class SimpleRNNModel(torch.nn.Module):
     def __init__(self, embedding_dim:int, hidden_dim:int, output_dim:int, pad_idx:int, vocab_size:int):
         super(SimpleRNNModel, self).__init__()
@@ -34,7 +56,6 @@ class SimpleRNNModel(torch.nn.Module):
         
 
 if __name__=="__main__":
-    model = SimpleRNNModel(embedding_dim=100, hidden_dim=256, output_dim=10, pad_idx=0, vocab_size=10000)
+    model = EmbeddingMatrixModel(embedding_dim=100, output_dim=10, pad_idx=0, vocab_size=10000)
     batch = torch.randint(0, 2, (2, 10))
     out = model(batch)
-    print(out.shape)

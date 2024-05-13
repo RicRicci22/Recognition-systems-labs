@@ -3,9 +3,9 @@ import pandas as pd
 import json
 from transformers import AutoTokenizer
 
-def create_vocabulary(data_path:str, min_freq:int=10):
+def create_vocabulary(data_path:str, min_freq:int=1):
     data = pd.read_csv(data_path)
-    abstracts = data["ABSTRACT"].tolist()
+    abstracts = data["TITLE"].tolist()
     abstracts = [abstract.strip().lower().replace("\n", " ") for abstract in abstracts]
     # Tokenize the text in words
     all_abs_tokenized = [abstract.split() for abstract in abstracts]
@@ -49,18 +49,6 @@ def convert_texts_to_indices(texts:list, word2idx:dict, pad_idx:int=0):
                 pass # We leave the padding token
         
     return batch_titles
-    
-def convert_texts_to_indices_bert(texts:list, max_len:int=512):
-    # Given a list of titles, convert them to indices using the vocabulary. Pad the sequences to the same length
-    
-    # Input:
-    # tokenized_titles: List of titles
-    # pad_idx: Index to pad the sequences
-    # word2idx: Dictionary mapping words to indices
-    tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
-    batch_titles = tokenizer(texts, padding="max_length", truncation=True, max_length=max_len, return_tensors="pt")
-        
-    return batch_titles
 
 
 if __name__=="__main__":
@@ -68,4 +56,3 @@ if __name__=="__main__":
     v2i = json.load(open("w2i.json"))
     batch = convert_texts_to_indices_bert(["mathematics world there", "good morning"], 512)
     print(batch)
-    
