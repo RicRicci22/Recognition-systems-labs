@@ -174,4 +174,13 @@ Lab_2/Resnet18_linear_probing/
 Lab_2/Resnet50_linear_probing/
 Lab_2/Resnet101_linear_probing/
 
-Lab_3/train.py
+Lab_3/train.csv
+Lab_3/i2w.json
+Lab_3/w2i.json
+
+Lab_5/raw_instrumental_measures/
+Lab_5/sensory_measures/
+Lab_5/force.pkl
+Lab_5/graininess.pkl
+Lab_5/hardness.pkl
+Lab_5/sound.pkl
